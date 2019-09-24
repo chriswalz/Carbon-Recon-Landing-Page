@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>ReconBuddy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="Pen-Testing for $500 ">
+    <meta name="description" content="ReconBuddy Demo">
     <meta property="og:image" content="">
     <link rel="shortcut icon" href="https://carbonrecon.com/favicon-32x32.png">
     <link href="assets/css" rel="stylesheet">
@@ -24,6 +24,8 @@
       gtag('config', 'UA-58569843-8');
     </script>
 
+    <script src='https://unpkg.com/swagger-client' type='text/javascript'></script>
+    <script src='js/load_api.js' type='text/javascript'></script>
 
     <style>
         .launchaco-promo {
@@ -126,47 +128,78 @@
     </header>
     <section class="section">
         <div class="container mb40">
-            <div class="col-12 text-center">
-                <h1 class="heading-lrg primary-color launchaco-builder-hoverable">Pen-Testing for $500 </h1>
-                <h2 class="subheading secondary-color mt20 launchaco-builder-hoverable">Blazing fast endpoint and
-                    vulnerability scans</h2>
-                <div class="mt40">
+            <div id="main" class="col-12 text-center">
+                <h1 class="heading-lrg primary-color launchaco-builder-hoverable">ReconBuddy Demo</h1>
+                <h2 class="subheading secondary-color mt20 launchaco-builder-hoverable">This is a demo for instant API
+                    scans</h2>
+                <div id="step1" class="mt40">
                     <form action="https://joltimate.us10.list-manage.com/subscribe/post?u=511d3cbbf8c937213d78a4965&amp;amp;id=1f2749cbd7"
                           method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
                           target="_blank" novalidate="novalidate" class="container-sml mailchimp flex mb20"><input
-                            type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Your Email Address"
+                            type="email" name="EMAIL" id="mce-EMAIL" value="example.com/api"
                             required="required" class="mailchimp-input mobile-text-center">
-                        <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text"
-                                                                                                  name="b_3198ee66c8baf4d60aa2fee6b_d60e1830e8"
-                                                                                                  tabindex="-1"
-                                                                                                  value=""></div>
-                        <input type="submit" name="subscribe" id="mc-embedded-subscribe"
-                               class="white-color button no-max-width accent-bg primary-color" value="Get Early Access">
+                        <div aria-hidden="true" style="position: absolute; left: -5000px;"></div>
+                        <input onclick="nextStep()" name="subscribe" id="mc-embedded-subscribe-1"
+                               class="white-color button no-max-width accent-bg primary-color"
+                               value="Target this Domain">
                     </form>
+                </div>
+                <div id="step2" style="display: none;" class="mt40">
+                    <form action="https://joltimate.us10.list-manage.com/subscribe/post?u=511d3cbbf8c937213d78a4965&amp;amp;id=1f2749cbd7"
+                          method="post" id="mc-embedded-subscribe-form-2" name="mc-embedded-subscribe-form"
+                          target="_blank" novalidate="novalidate" class="container-sml mailchimp flex mb20"><input
+                            type="email" name="EMAIL" id="mce-EMAIL-2"
+                            value="https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml"
+                            required="required" class="mailchimp-input mobile-text-center">
+                        <div aria-hidden="true" style="position: absolute; left: -5000px;"></div>
+                        <input onclick="nextStep()" name="subscribe" id="mc-embedded-subscribe-2"
+                               class="white-color button no-max-width accent-bg primary-color" value="Scan API">
+                    </form>
+                </div>
+                <div id="step3" style="display: none" class="mt40">
+                    <div id="clone" class="container-sml mailchimp flex mb20"></div>
                 </div>
             </div>
         </div>
-        <!---->
     </section>
 </div>
 
 
 <script>
-  window.onscroll = function () {
-    showAd()
-  }
+  var next = 1;
 
-  function showAd() {
-    var scrollBarPosition = window.pageYOffset | document.body.scrollTop;
-
-    // At specifiv position do what you want
-    if (scrollBarPosition > 300) {
-      document.getElementById("visual-dreamer").className = "launchaco-promo launchaco-promo__active";
-      window.onscroll = function () {
-      };
+  function nextStep() {
+    for (let i = 1; i <= next; i++) {
+      document.querySelector('#mc-embedded-subscribe-' + i).style.display = "none";
+      document.querySelector(`#step${next+1}`).style.display = "block";
     }
+
+    next++;
+
+    if (next === 3) {
+      loadApi();
+    }
+
   }
+
 </script>
 
 </body>
 </html>
+<!--
+<div class="mt40" id="step1">
+    <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text"
+                                                                              name="b_3198ee66c8baf4d60aa2fee6b_d60e1830e8"
+                                                                              tabindex="-1" value="">
+    </div>
+    <input onclick="nextStep()" name="subscribe" id="mc-embedded-subscribe"
+           class="white-color button no-max-width accent-bg primary-color" value="Get Started">
+</div>
+<div class="mt40" id="step2">
+    <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text"
+                                                                              name="b_3198ee66c8baf4d60aa2fee6b_d60e1830e8"
+                                                                              tabindex="-1" value="">
+    </div>
+    <input onclick="nextStep()" name="subscribe" id="mc-embedded-subscribe-2"
+           class="white-color button no-max-width accent-bg primary-color" value="Scan My API">
+</div>-->
