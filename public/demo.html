@@ -177,7 +177,8 @@
     next++;
 
     if (next === 3) {
-      loadApi();
+      const specUrl = document.querySelector('#mce-EMAIL-2').value;
+      loadApi(specUrl);
     }
 
   }

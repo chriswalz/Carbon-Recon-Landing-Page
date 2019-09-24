@@ -1,5 +1,4 @@
-function loadApi() {
-  const specUrl = "https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/petstore.yaml";
+function loadApi(specUrl) {
   var swaggerClient = new SwaggerClient(specUrl).then(client => {
     console.log(client);
     console.log(client.errors);
