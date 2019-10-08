@@ -110,6 +110,87 @@
         .launchaco-promo-animate:hover {
             opacity: 1 !important;
         }
+        @keyframes go-right-a
+        {
+            0% {
+                left: -50%;
+                top: 150%;
+                transform: rotate(45deg) scale(.3);
+            }
+            100% {
+                left: 150%;
+                top: -50%;
+                transform: rotate(45deg) scale(.3);
+            }
+
+        }
+
+        @keyframes go-right-b
+        {
+            0% {
+                left: -75%;
+                top: 175%;
+                transform: rotate(45deg) scale(.3);
+            }
+            100% {
+                left: 125%;
+                top: -50%;
+                transform: rotate(45deg) scale(.3);
+            }
+
+        }
+
+        @keyframes go-right-c
+        {
+            0% {
+                left: -75%;
+                top: 200%;
+                transform: rotate(45deg) scale(.3);
+            }
+            100% {
+                left: 155%;
+                top: -25%;
+                transform: rotate(45deg) scale(.3);
+            }
+
+        }
+
+        .bird {
+            background-image: url(assets/carbonReconLogoSquare.svg);
+            /*background-size: auto 100%;*/
+            width: 200px;
+            height: 200px;
+            will-change: transform;
+
+        }
+
+        .bird-container-base {
+            left: -100%;
+            position: absolute;
+            will-change: transform;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+        }
+
+
+        .bird-container-a {
+            animation-name: go-right-a;
+            animation-duration: 5s;
+            animation-delay: 0s;
+
+        }
+        .bird-container-b {
+            animation-name: go-right-b;
+            animation-duration: 5s;
+            animation-delay: 0s;
+
+        }
+        .bird-container-c {
+            animation-name: go-right-c;
+            animation-duration: 5s;
+            animation-delay: 0s;
+
+        }
     </style>
 </head>
 
@@ -133,7 +214,7 @@
                 <div class="mt40">
                     <form action="https://joltimate.us10.list-manage.com/subscribe/post?u=511d3cbbf8c937213d78a4965&amp;amp;id=1f2749cbd7"
                           method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                          target="_blank" novalidate="novalidate" class="container-sml mailchimp flex mb20"><input
+                          target="_blank" novalidate="novalidate" class="container-sml mailchimp flex mb20"><input autofocus
                             type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Your Email Address"
                             required="required" class="mailchimp-input mobile-text-center">
                         <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text"
@@ -145,6 +226,15 @@
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="bird-container-base bird-container-a">
+            <div class="bird bird--one"></div>
+        </div>
+        <div class="bird-container-base bird-container-b">
+            <div class="bird bird--one"></div>
+        </div>
+        <div class="bird-container-base bird-container-c">
+            <div class="bird bird--one"></div>
         </div>
         <!---->
     </section>

@@ -170,6 +170,7 @@
 
   function nextStep() {
     for (let i = 1; i <= next; i++) {
+      // https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v3.0/uspto.yaml
       document.querySelector('#mc-embedded-subscribe-' + i).style.display = "none";
       document.querySelector(`#step${next+1}`).style.display = "block";
     }
