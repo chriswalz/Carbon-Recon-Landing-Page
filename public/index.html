@@ -153,8 +153,14 @@
 
         }
 
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
         .bird {
             background-image: url(assets/carbonReconLogoSquare.svg);
+            background-repeat: no-repeat;
             /*background-size: auto 100%;*/
             width: 200px;
             height: 200px;
@@ -208,9 +214,9 @@
     <section class="section">
         <div class="container mb40">
             <div class="col-12 text-center">
-                <h1 class="heading-lrg primary-color launchaco-builder-hoverable">API Security with 0 Setup</h1>
+                <h1 class="heading-lrg primary-color launchaco-builder-hoverable">Find vulnerabilities fast.</h1>
                 <h2 class="subheading secondary-color mt20 launchaco-builder-hoverable">Blazing fast endpoint and
-                    vulnerability scans with near instant regression analysis</h2>
+                    vulnerability scans including near instant regression analysis</h2>
                 <div class="mt40">
                     <form action="https://joltimate.us10.list-manage.com/subscribe/post?u=511d3cbbf8c937213d78a4965&amp;amp;id=1f2749cbd7"
                           method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
@@ -229,16 +235,50 @@
                                class="white-color button no-max-width accent-bg primary-color" value="Get Early Access">
                     </form>
                 </div>
-                <video autoplay loop muted playsinline width="750" style="box-shadow: -1px 9px 33px 5px rgba(0,0,0,0.75)">
+                <div style="animation: fadein 7s">
+                    <h2 class="subheading secondary-color mt20 launchaco-builder-hoverable">Security as a service – built for Engineers</h2>
+                    <video autoplay loop muted playsinline width="750" class="video-demo">
 
-                    <source src="assets/demo2.webm"
-                            type="video/webm">
+                        <source src="assets/demo2.webm"
+                                type="video/webm">
 
-                    <source src="assets/demo2.mp4"
-                            type="video/mp4">
+                        <source src="assets/demo2.mp4"
+                                type="video/mp4">
 
-                    Sorry, your browser doesn't support embedded videos.
-                </video>
+                        Sorry, your browser doesn't support embedded videos.
+                    </video>
+                    <h2 class="subheading secondary-color mt20 launchaco-builder-hoverable">ReconBuddy is democratizing security</h2>
+                    <video autoplay loop muted playsinline width="750" class="video-demo">
+
+                        <source class="video-demo" src="assets/vulnDemo.webm"
+                                type="video/webm">
+
+                        <source class="video-demo" src="assets/vulnDemo.mp4"
+                                type="video/mp4">
+
+                        Sorry, your browser doesn't support embedded videos.
+                    </video>
+
+                    <h2 class="subheading secondary-color mt20 launchaco-builder-hoverable">Come join the revolution</h2>
+                    <div class="mt40">
+                        <form action="https://joltimate.us10.list-manage.com/subscribe/post?u=511d3cbbf8c937213d78a4965&amp;amp;id=1f2749cbd7"
+                              method="post" id="mc-embedded-subscribe-form-2" name="mc-embedded-subscribe-form"
+                              target="_blank" novalidate="novalidate" class="container-sml mailchimp flex mb20">
+                            <input
+                                    autofocus
+                                    type="email" value="" name="EMAIL" id="mce-EMAIL-2" placeholder="Your Email Address"
+                                    required="required" class="mailchimp-input mobile-text-center">
+                            <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                <input type="text"
+                                       name="b_3198ee66c8baf4d60aa2fee6b_d60e1830e8"
+                                       tabindex="-1"
+                                       value="">
+                            </div>
+                            <input type="submit" name="subscribe" id="mc-embedded-subscribe-2"
+                                   class="white-color button no-max-width accent-bg primary-color" value="Get Early Access">
+                        </form>
+                    </div>
+                </div>
             </div>
 
         </div>
