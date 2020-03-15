@@ -35,114 +35,11 @@
             opacity: 1;
         }
 
-        @keyframes popinpopup {
-            0% {
-                opacity: 0;
-                transform: translate3d(0, 3px, 0)
-            }
-
-            7%,
-            93% {
-                opacity: 1;
-                transform: translate3d(0, 0, 0)
-            }
-
-            100% {
-                opacity: 0;
-                transform: translate3d(0, -4px, 0)
-            }
-        }
-
-        .launchaco-promo-animate:hover {
-            opacity: 1 !important;
-        }
-
-        @keyframes go-right-a {
-            0% {
-                left: -50%;
-                top: 150%;
-                transform: rotate(45deg) scale(.3);
-            }
-            100% {
-                left: 150%;
-                top: -50%;
-                transform: rotate(45deg) scale(.3);
-            }
-
-        }
-
-        @keyframes go-right-b {
-            0% {
-                left: -75%;
-                top: 175%;
-                transform: rotate(45deg) scale(.3);
-            }
-            100% {
-                left: 125%;
-                top: -50%;
-                transform: rotate(45deg) scale(.3);
-            }
-
-        }
-
-        @keyframes go-right-c {
-            0% {
-                left: -75%;
-                top: 200%;
-                transform: rotate(45deg) scale(.3);
-            }
-            100% {
-                left: 155%;
-                top: -25%;
-                transform: rotate(45deg) scale(.3);
-            }
-
-        }
-
         @keyframes fadein {
             from { opacity: 0; }
             to   { opacity: 1; }
         }
 
-        .bird {
-            background-image: url(assets/carbonReconLogoSquare.svg);
-            background-repeat: no-repeat;
-            /*background-size: auto 100%;*/
-            width: 200px;
-            height: 200px;
-            will-change: transform;
-
-        }
-
-        .bird-container-base {
-            left: -100%;
-            position: absolute;
-            will-change: transform;
-            animation-iteration-count: 1;
-            animation-timing-function: ease-in;
-        }
-
-
-        .bird-container-a {
-            animation-name: go-right-a;
-            animation-duration: 5s;
-            animation-delay: 0s;
-
-        }
-
-        .bird-container-b {
-            animation-name: go-right-b;
-            animation-duration: 5s;
-            animation-delay: 0s;
-
-        }
-
-        .bird-container-c {
-            animation-name: go-right-c;
-            animation-duration: 5s;
-            animation-delay: 0s;
-
-        }
     </style>
 </head>
 
@@ -151,9 +48,14 @@
     <!---->
     <header class="header">
         <div class="container-lrg">
-            <div class="flex col-12 spread"><a class="logo launchaco-builder-hoverable logo"><img
-                    src="assets/reconbuddyFullLogo.png" alt="ReconBuddy Logo"></a> <a href="mailto:walz@reconbuddy.com"
-                                                                                      class="nav-link secondary-color mr0">Contact</a>
+            <div class="flex col-12 spread">
+                <a href="/index.html" class="logo launchaco-builder-hoverable logo">
+                    <img src="assets/reconbuddyFullLogo.png" alt="ReconBuddy Logo">
+                </a>
+                <div>
+                    <a href="/faq.html" class="nav-link secondary-color mr0">FAQ</a>
+                    <a href="mailto:walz@reconbuddy.com" class="nav-link secondary-color mr0">Contact</a>
+                </div>
             </div>
         </div>
     </header>
@@ -193,7 +95,7 @@
 
                         Sorry, your browser doesn't support embedded videos.
                     </video>
-                    <h2 class="subheading secondary-color mt20 launchaco-builder-hoverable">ReconBuddy is democratizing security</h2>
+                    <h2 class="subheading secondary-color mt20 launchaco-builder-hoverable">Vulnerability reports made simple</h2>
                     <video preload="none" autoplay loop muted playsinline width="90%" class="video-demo">
 
                         <source class="video-demo" src="assets/vulnDemo.webm"
@@ -227,15 +129,6 @@
                 </div>
             </div>
 
-        </div>
-        <div class="bird-container-base bird-container-a">
-            <div class="bird bird--one"></div>
-        </div>
-        <div class="bird-container-base bird-container-b">
-            <div class="bird bird--one"></div>
-        </div>
-        <div class="bird-container-base bird-container-c">
-            <div class="bird bird--one"></div>
         </div>
         <!---->
     </section>

@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>ReconBuddy</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="Pen-Testing for $500 ">
+    <meta name="description" content="Web Application Security built for Engineers">
     <meta property="og:image" content="">
     <link rel="shortcut icon" href="https://carbonrecon.com/favicon-32x32.png">
     <link href="assets/css" rel="stylesheet">
@@ -26,39 +26,6 @@
 
 
     <style>
-        .launchaco-promo {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            cursor: pointer;
-            width: 0;
-            height: 0;
-            z-index: 999999;
-        }
-
-        .launchaco-promo__active {
-            width: initial;
-            height: initial;
-        }
-
-        .launchaco-promo-speechbubble {
-            font-family: -apple-system, BlinkMacSystemFont, Roboto, "Open Sans", "Helvetica Neue", sans-serif;
-            position: absolute;
-            left: 50px;
-            top: -11px;
-            padding: 9px;
-            color: white;
-            border-radius: 3px;
-            background: linear-gradient(#227ef7, #1290fc);
-            font-size: 14px;
-            font-weight: 600;
-            width: 93px;
-            box-sizing: border-box;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity .15s ease-in-out;
-        }
-
         .launchaco-promo__active:hover .launchaco-promo-speechbubble {
             opacity: 1;
         }
@@ -72,125 +39,10 @@
             opacity: 1;
         }
 
-        .launchaco-promo-speechbubble:before {
-            content: "";
-            width: 10px;
-            height: 10px;
-            transform: rotate(45deg);
-            left: -4px;
-            bottom: 10px;
-            border-radius: 3px;
-            background: #1290fc;
-            z-index: 2;
-            position: absolute
-        }
-
         .launchaco-promo__active .launchaco-promo-speechbubble__animate {
             animation: popinpopup 3s linear forwards 0.1s;
         }
 
-        @keyframes popinpopup {
-            0% {
-                opacity: 0;
-                transform: translate3d(0, 3px, 0)
-            }
-
-            7%,
-            93% {
-                opacity: 1;
-                transform: translate3d(0, 0, 0)
-            }
-
-            100% {
-                opacity: 0;
-                transform: translate3d(0, -4px, 0)
-            }
-        }
-
-        .launchaco-promo-animate:hover {
-            opacity: 1 !important;
-        }
-
-        @keyframes go-right-a {
-            0% {
-                left: -100%;
-                top: 150%;
-                transform: rotate(45deg) scale(.3);
-            }
-            100% {
-                left: 100%;
-                top: -50%;
-                transform: rotate(45deg) scale(.3);
-            }
-
-        }
-
-        @keyframes go-right-b {
-            0% {
-                left: -125%;
-                top: 175%;
-                transform: rotate(45deg) scale(.3);
-            }
-            100% {
-                left: 100%;
-                top: -50%;
-                transform: rotate(45deg) scale(.3);
-            }
-
-        }
-
-        @keyframes go-right-c {
-            0% {
-                left: -125%;
-                top: 200%;
-                transform: rotate(45deg) scale(.3);
-            }
-            100% {
-                left: 155%;
-                top: -25%;
-                transform: rotate(45deg) scale(.3);
-            }
-
-        }
-
-        .bird {
-            background-image: url(assets/carbonReconLogoSquare.svg);
-            /*background-size: auto 100%;*/
-            width: 200px;
-            height: 200px;
-            will-change: transform;
-
-        }
-
-        .bird-container-base {
-            left: -100%;
-            position: absolute;
-            will-change: transform;
-            animation-iteration-count: 1;
-            animation-timing-function: ease-in;
-        }
-
-
-        .bird-container-a {
-            animation-name: go-right-a;
-            animation-duration: 5s;
-            animation-delay: 0s;
-
-        }
-
-        .bird-container-b {
-            animation-name: go-right-b;
-            animation-duration: 5s;
-            animation-delay: 0s;
-
-        }
-
-        .bird-container-c {
-            animation-name: go-right-c;
-            animation-duration: 5s;
-            animation-delay: 0s;
-
-        }
     </style>
 </head>
 
@@ -200,13 +52,12 @@
     <header class="header">
         <div class="container-lrg">
             <div class="flex col-12 spread">
-                <a class="logo launchaco-builder-hoverable logo">
+                <a href="/index.html" class="logo launchaco-builder-hoverable logo">
                     <img src="assets/reconbuddyFullLogo.png" alt="ReconBuddy Logo">
                 </a>
                 <div>
-                    <a href="mailto:walz@reconbuddy.com" class="nav-link secondary-color mr0">FAQ</a>
+                    <a href="/faq.html" class="nav-link secondary-color mr0">FAQ</a>
                     <a href="mailto:walz@reconbuddy.com" class="nav-link secondary-color mr0">Contact</a>
-
                 </div>
             </div>
         </div>
@@ -214,36 +65,17 @@
     <section class="section">
         <div class="container mb40">
             <div class="col-12 text-center">
-                <h1 class="heading-lrg primary-color launchaco-builder-hoverable">Instant API Security</h1>
-                <h2 class="subheading secondary-color mt20 launchaco-builder-hoverable">Blazing fast endpoint and
-                    vulnerability scans</h2>
-                <div class="mt40">
-                    <form action="https://joltimate.us10.list-manage.com/subscribe/post?u=511d3cbbf8c937213d78a4965&amp;amp;id=1f2749cbd7"
-                          method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                          target="_blank" novalidate="novalidate" class="container-sml mailchimp flex mb20"><input
-                            autofocus
-                            type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="Your Email Address"
-                            required="required" class="mailchimp-input mobile-text-center">
-                        <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text"
-                                                                                                  name="b_3198ee66c8baf4d60aa2fee6b_d60e1830e8"
-                                                                                                  tabindex="-1"
-                                                                                                  value=""></div>
-                        <input type="submit" name="subscribe" id="mc-embedded-subscribe"
-                               class="white-color button no-max-width accent-bg primary-color" value="Get Early Access">
-                    </form>
-                </div>
+                <h1 class="heading-lrg primary-color launchaco-builder-hoverable">FAQ</h1>
+                <h2 class="subheading secondary-color mt20 launchaco-builder-hoverable">What can you scan?</h2>
+                <div style="font-size: 20px; font-family: Arial,serif">We scan Websites, Mobile Apps and API's. We use passive and active scanning. In the future, we may do code analysis as well.</div>
+                <h2 class="subheading secondary-color mt20 launchaco-builder-hoverable" style="margin-bottom: 16px">How does ReconBuddy work?</h2>
+                <div style="font-size: 20px; font-family: Arial,serif">Provide ReconBuddy a link to your website then initiate a scan. ReconBuddy will provide you with a list of vulnerabilities along with their risk assessments.</div>
+                <h2 class="subheading secondary-color mt20 launchaco-builder-hoverable">What's your pricing?</h2>
+                <div style="font-size: 20px; font-family: Arial,serif">Basic scans are free of charge. Full Scans (Authenticated) are $199 per FQDN per scan</div>
+                <h2 class="subheading secondary-color mt20 launchaco-builder-hoverable">Who runs ReconBuddy?</h2>
+                <div style="font-size: 20px; font-family: Arial,serif">ReconBuddy is run by two brothers with battle-hardened experience in Cyber Security and Software Engineering. They joined forces in their mission to secure the internet</div>
             </div>
         </div>
-        <div class="bird-container-base bird-container-a">
-            <div class="bird bird--one"></div>
-        </div>
-        <div class="bird-container-base bird-container-b">
-            <div class="bird bird--one"></div>
-        </div>
-        <div class="bird-container-base bird-container-c">
-            <div class="bird bird--one"></div>
-        </div>
-        <!---->
     </section>
 </div>
 
