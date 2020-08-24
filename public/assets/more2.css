@@ -4,10 +4,10 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
-.row {
+.row-rb {
     min-height: 100vh;
 }
-.card {
+.card-rb {
     border: 0;
     border-radius: 0px;
     -webkit-box-shadow: 0 3px 0px 0 rgba(0, 0, 0, .08);
@@ -17,7 +17,7 @@ body {
     position: relative;
     will-change: transform;
 }
-.card:after {
+.card-rb:after {
     content: '';
     position: absolute;
     top: 0;
@@ -27,26 +27,26 @@ body {
     background-color: #57e2b2;
     transition: 0.5s;
 }
-.card:hover {
+.card-rb:hover {
     transform: scale(1.05);
     -webkit-box-shadow: 0 20px 35px 0 rgba(0, 0, 0, .08);
     box-shadow: 0 20px 35px 0 rgba(0, 0, 0, .08);
 }
-.card:hover:after {
+.card-rb:hover:after {
     width: 100%;
 }
-.card .card-header {
+.card-rb .card-rb-header {
     background-color: white;
     padding-left: 2rem;
     border-bottom: 0px;
 }
-.card .card-title {
+.card-rb .card-rb-title {
     margin-bottom: 1rem;
 }
-.card .card-block {
+.card-rb .card-rb-block {
     padding-top: 0;
 }
-.card .list-group-item {
+.card-rb .list-group-item {
     border: 0px;
     padding: 0.25rem;
     color: #808080;
@@ -85,4 +85,3 @@ body {
     color: white;
     background-color: #57e2b2;
 }
- 
